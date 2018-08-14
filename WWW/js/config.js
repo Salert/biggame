@@ -1,3 +1,3 @@
-var sizeGeks = 30;
-var mapSizeY = 5;
-var mapSizeX = 5;
+var sizeGeks = 25;
+var mapSizeY = 20;
+var mapSizeX =  5;

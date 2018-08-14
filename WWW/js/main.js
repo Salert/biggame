@@ -19,13 +19,15 @@ if (canvas.getContext){
   ctx.beginPath();
   xy = sizeGeks*2;
 
-  for(var j = 0; j < mapSizeY; j++)
-    for(var i = 0; i < mapSizeX; i++){
+
+  for(var j = 0; j < mapSizeY; j++){
+    var offSX = (j % 2 != 0) ? 1  : 0;
+    for(var i = 0; i < mapSizeX - offSX; i++){
       var offSetY = sizeGeks * (Math.sqrt(3) / 2);
       var offSetX = (j % 2 != 0) ? (sizeGeks + sizeGeks / 2) : 0;
       polygon(ctx, 6, xy + (sizeGeks * 2 + sizeGeks) * i + offSetX, xy + (offSetY * j), sizeGeks, Math.PI/6);
     }
-
+  }
 
   ctx.fillStyle = "#ffffff";
   ctx.strokeStyle = "#000";
